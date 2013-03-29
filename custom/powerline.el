@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20130203.720")
+(require 'powerline)
+(powerline-default)
+(powerline-default-center)
+(setq powerline-arrow-shape 'arrow14)
