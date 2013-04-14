@@ -1,15 +1,12 @@
-
 ;;Packages
 (load "~/.emacs.d/custom/packages.el")
-;;Packages
+;;Custom Stuff
 (load "~/.emacs.d/custom/custom.el")
-;;Packages
-(load "~/.emacs.d/custom/c-hook.el")
-;;Packages
+;;Protobuf Hook
 (load "~/.emacs.d/custom/protobuf-hook.el")
-;;Packages
+;;EL-GET
 (load "~/.emacs.d/custom/el-get-custom.el")
-;;Packages
+;;Golden-Ratio
 (load "~/.emacs.d/custom/golden-ratio.el")
 ;;Powerline
 (load "~/.emacs.d/custom/powerline.el")
