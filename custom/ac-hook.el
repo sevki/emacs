@@ -3,7 +3,7 @@
 ; Load the default configuration
 (require 'auto-complete-config)
 ; Make sure we can find the dictionaries
-;;(add-to-list 'ac-dictionary-directories "~/emacs/auto-complete/dict")
+(add-to-list 'ac-dictionary-directories "~/emacs/auto-complete/dict")
 ; Use dictionaries by default
 
 (require 'cc-mode)
@@ -38,7 +38,7 @@
 
 ;; The mode that automatically startup.
 (setq ac-modes
-      '(emacs-lisp-mode lisp-interaction-mode lisp-mode scheme-mode
+      '(emacs-lisp-mode lisp-interaction-mode lisp-mode
                         c-mode cc-mode c++-mode java-mode
                         perl-mode cperl-mode python-mode ruby-mode
                         ecmascript-mode javascript-mode php-mode css-mode
@@ -60,10 +60,26 @@
                           (cons "->" '(ac-source-semantic)))
              ))
 
-(add-hook 'c++-mode-hook '(lambda ()
-                           (add-to-list 'ac-sources 'ac-c++-sources)))
+;;(add-hook 'c++-mode-hook '(lambda ()
+   ;;                        (add-to-list 'ac-sources 'ac-c++-sources)))
 
 
 
 
 (setq-default ac-sources (add-to-list 'ac-sources 'ac-source-dictionary ac-source-yasnippet))
+(load "~/.emacs.d/custom/clang-completion-mode.el")
+(load "~/.emacs.d/custom/auto-complete-clang-async.el")
+(require 'auto-complete-clang-async)
+
+(defun ac-cc-mode-setup ()
+  (setq ac-clang-complete-executable "~/.emacs.d/vendor/emacs-clang-complete-async/clang-complete")
+  (setq ac-sources '(ac-source-clang-async))
+  (ac-clang-launch-completion-process)
+)
+
+(defun my-ac-config ()
+  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
+
+(my-ac-config)

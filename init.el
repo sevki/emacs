@@ -12,3 +12,5 @@
 (load "~/.emacs.d/custom/powerline.el")
 ;;Theme
 (load "~/.emacs.d/custom/theme.el")
+;;
+(load "~/.emacs.d/custom/auctex.el")
