@@ -11,4 +11,6 @@
 
 (load "~/.emacs.d/custom/clang-completion-mode.el")
 
+(load "~/.emacs.d/custom/go-hook.el")
+
 (tool-bar-mode -1)

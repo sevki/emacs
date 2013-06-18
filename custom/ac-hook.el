@@ -39,26 +39,26 @@
 ;; The mode that automatically startup.
 (setq ac-modes
       '(emacs-lisp-mode lisp-interaction-mode lisp-mode
-                        c-mode cc-mode c++-mode java-mode
-                        perl-mode cperl-mode python-mode ruby-mode
-                        ecmascript-mode javascript-mode php-mode css-mode
-                        makefile-mode sh-mode fortran-mode f90-mode ada-mode
-                        xml-mode sgml-mode
-                        haskell-mode literate-haskell-mode
-                        emms-tag-editor-mode
-                        asm-mode
-                        org-mode))
+			c-mode cc-mode c++-mode java-mode
+			perl-mode cperl-mode python-mode ruby-mode
+			ecmascript-mode javascript-mode php-mode css-mode
+			makefile-mode sh-mode fortran-mode f90-mode ada-mode
+			xml-mode sgml-mode
+			haskell-mode literate-haskell-mode
+			emms-tag-editor-mode
+			asm-mode go-mode
+			org-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; C-common-mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Enables omnicompletion with `c-mode-common'.
 (add-hook 'c-mode-common-hook
-          '(lambda ()
-             (add-to-list 'ac-omni-completion-sources
-                          (cons "\\." '(ac-source-semantic)))
-             (add-to-list 'ac-omni-completion-sources
-                          (cons "->" '(ac-source-semantic)))
-             ))
+	  '(lambda ()
+	     (add-to-list 'ac-omni-completion-sources
+			  (cons "\\." '(ac-source-semantic)))
+	     (add-to-list 'ac-omni-completion-sources
+			  (cons "->" '(ac-source-semantic)))
+	     ))
 
 ;;(add-hook 'c++-mode-hook '(lambda ()
    ;;                        (add-to-list 'ac-sources 'ac-c++-sources)))
