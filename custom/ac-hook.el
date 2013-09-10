@@ -73,6 +73,7 @@
 
 (defun ac-cc-mode-setup ()
   (setq ac-clang-complete-executable "~/.emacs.d/vendor/emacs-clang-complete-async/clang-complete")
+
   (setq ac-sources '(ac-source-clang-async))
   (ac-clang-launch-completion-process)
 )

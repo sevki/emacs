@@ -2,7 +2,7 @@
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
-(global-semantic-decoration-mode t)
+;;(global-semantic-decoration-mode t)
 (global-semantic-highlight-func-mode t)
 ;;(global-semantic-idle-completions-mode t )
 (global-semantic-idle-summary-mode t)
