@@ -11,7 +11,7 @@
 
 ;; customisation of cc-mode
 (defun sevki/c-mode-common-hook ()
-
+  (lambda() (linum-relative-toggle))
   (show-paren-mode t)
 
   (setq c-default-style "linux")
@@ -44,3 +44,5 @@
 ;;;;
 (c-mode)
 (load "~/.emacs.d/custom/ac-hook.el")
+(load "~/.emacs.d/elpa/json-1.2/json.el")
+(load "~/.emacs.d/vendor/clang-format/clang-format.el")

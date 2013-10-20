@@ -17,6 +17,7 @@
 (yas/load-directory "~/.emacs.d/elpa/yasnippet-20120923.1126/snippets/c-mode")
 (yas/load-directory "~/.emacs.d/elpa/yasnippet-20120923.1126/snippets/c++-mode")
 (yas/load-directory "~/.emacs.d/elpa/yasnippet-20120923.1126/snippets/cc-mode")
+
 ;; Let's have snippets in the auto-complete dropdown
 
 
