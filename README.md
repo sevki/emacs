@@ -1,13 +1,13 @@
 My ~/.emacs.d
 =====
 
-I mainly use emacs for c, go kinda development.
+I mostly do c development in emacs. But there are some other languages sprinkled in here as well.
 
 External deps
 -------------
-[LLVM](http://clang.llvm.org/)
-[irony-mode](https://github.com/Sarcasm/irony-mode)
-[Cask](http://cask.github.io) 
++ [LLVM](http://clang.llvm.org/)
++ [irony-mode](https://github.com/Sarcasm/irony-mode)
++ [Cask](http://cask.github.io) 
 
 Setup
 ------------
