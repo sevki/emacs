@@ -14,6 +14,8 @@
 (load "~/.emacs.d/custom/rainbow.el")
 ;;Linum Relative
 (load "~/.emacs.d/custom/linum.el")
+;;Expand Region
+(load "~/.emacs.d/custom/expand-region.el")
 
 ;;Irony Mode
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/irony-mode/elisp/"))
@@ -25,17 +27,11 @@
 (setq inhibit-splash-screen t
       initial-scratch-message nil)
 ;;(global-linum-mode t)
+(delete-selection-mode 1)
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- ;; '(ac-clang-cflags (quote ("-I~/Code/elnix/src/include")))
- ;; '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
- ;; '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
- ;; '(linum-format "%3i ")
- ;; '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/Volumes/Virgil/elnix/src/include")))
+ '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
+ '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
+ '(linum-format "%3i ")
+  '(semantic-c-dependency-system-include-path (quote ("/usr/include" "~/Code/elnix/src/include")))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
-
-(delete-selection-mode 1)
