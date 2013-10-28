@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("git-pkg.el" "git.el") (21092 13833 47919
+;;;### (autoloads nil nil ("git-pkg.el" "git.el") (21092 21968 211569
 ;;;;;;  0))
 
 ;;;***

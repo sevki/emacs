@@ -1,5 +1,3 @@
-(load "~/.emacs.d/elpa/go-mode-20130523.1019/go-mode.el")
 (load "~/.emacs.d/vendor/go-autocomplete.el")
-(load "~/.emacs.d/custom/ac-hook.el")
 (require 'go-autocomplete)
 (require 'auto-complete-config)

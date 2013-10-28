@@ -43,6 +43,28 @@
 (add-hook 'c-mode-common-hook 'sevki/c-mode-common-hook)
 ;;;;
 (c-mode)
-(load "~/.emacs.d/custom/ac-hook.el")
-(load "~/.emacs.d/elpa/json-1.2/json.el")
-(load "~/.emacs.d/vendor/clang-format/clang-format.el")
+(require 'cc-mode)
+
+(require 'yasnippet)
+
+(yas--initialize)
+;; Load the snippet files themselves
+(yas/load-directory "~/.emacs.d/snippets/text-mode")
+(yas/load-directory "~/.emacs.d/snippets/c-mode")
+(yas/load-directory "~/.emacs.d/snippets/c++-mode")
+(yas/load-directory "~/.emacs.d/snippets/cc-mode")
+(require 'irony) ;Note: hit `C-c C-b' to open build menu
+
+;; the ac plugin will be activated in each buffer using irony-mode
+(irony-enable 'ac)             ; hit C-RET to trigger completion
+
+(defun my-c++-hooks ()
+  "Enable the hooks in the preferred order: 'yas -> auto-complete -> irony'."
+  ;; if yas is not set before (auto-complete-mode 1), overlays may persist after
+  ;; an expansion.
+  (yas/minor-mode-on)
+  (auto-complete-mode 1)
+  (irony-mode 1))
+
+(add-hook 'c++-mode-hook 'my-c++-hooks)
+(add-hook 'c-mode-hook 'my-c++-hooks)

@@ -1,0 +1,36 @@
+(source gnu)
+(source marmalade)
+(source melpa)
+
+(depends-on "cask")
+(depends-on "dash")
+(depends-on "drag-stuff")
+(depends-on "expand-region")
+(depends-on "magit")
+(depends-on "multiple-cursors")
+(depends-on "popwin")
+(depends-on "projectile")
+(depends-on "s")
+(depends-on "smex")
+(depends-on "wrap-region")
+(depends-on "yasnippet")
+
+(depends-on "auto-complete")
+
+(depends-on "auto-complete-clang")
+
+(depends-on "go-autocomplete")
+
+(depends-on "autopair")
+
+(depends-on "powerline")
+(depends-on "ac-js2")
+(depends-on "findr")
+(depends-on "flycheck")
+(depends-on "markdown-mode")
+(depends-on "linum-relative")
+(depends-on "jedi")
+(depends-on "coffee-mode")
+(depends-on "rainbow-delimiters")
+(depends-on "rhtml-mode")
+(depends-on "protobuf-mode")
